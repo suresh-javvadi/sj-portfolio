@@ -13,7 +13,9 @@ const AppLayout = () => {
         <main className="flex-1 px-10">
           <Outlet />
         </main>
-        <NavBar />
+        <main className="flex items-center">
+          <NavBar />
+        </main>
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import scutoidLogo from "../assets/scutoid.jpg";
+import scutoidLogo from "../assets/scutoid_logo.jpeg";
 
 const formatDate = (date) => {
   return date.toLocaleString("default", { month: "short", year: "numeric" });
@@ -28,7 +28,7 @@ const Experience = () => {
   const startDate = "2024-05-01";
 
   return (
-    <div className="bg-black text-white border-2 border-[#4B3D10] p-6 space-y-10 rounded-lg">
+    <div className="bg-white dark:bg-black border-2 border-[#4B3D10] p-6 space-y-10 rounded-lg">
       {/* Education */}
       <div>
         <h1 className="text-2xl font-bold mb-4">Education</h1>
@@ -36,7 +36,7 @@ const Experience = () => {
           <h2 className="text-lg font-semibold">
             B.Tech in Computer Science and Engineering
           </h2>
-          <p className="text-gray-300">
+          <p>
             Avanthi Institute Of Engineering and Technology <br />
             2019 – 2023
           </p>
@@ -50,16 +50,16 @@ const Experience = () => {
           <img
             src={scutoidLogo}
             alt="Scutoid Technologies Logo"
-            className="w-20 h-20 rounded-lg object-cover border border-[#4B3D10]"
+            className="w-20 h-20 rounded-lg object-cover border border-[#4B3D10] p-2"
           />
           <div>
             <h3 className="text-lg font-semibold">
               Scutoid Technologies PVT. LTD
             </h3>
-            <p className="text-gray-300">
+            <p>
               <span className="font-semibold">Role:</span> React Developer
             </p>
-            <p className="text-gray-300">
+            <p>
               <span className="font-semibold">Duration:</span>{" "}
               {formatDate(new Date(startDate))} – Present (
               {getDuration(startDate)})

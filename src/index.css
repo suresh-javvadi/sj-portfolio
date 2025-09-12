@@ -2,6 +2,30 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
+  :root {
+    --bg-main: #fef6dd;
+    --text-main: black;
+    --border-main: #b7a261;
+    --bg-hlt: #b7a261;
+    --bg-hlt-hover: #9d8a55;
+
+    --bg-sec: white;
+
+    --beg-ter: #fdf4f4;
+  }
+
+  .dark {
+    --bg-main: #1e1e1e;
+    --text-main: white;
+    --border-main: #4b3d10;
+    --bg-hlt: #b7a261;
+    --bg-hlt-hover: #9d8a55;
+
+    --bg-sec: black;
+
+    --bg-ter: #60594b;
+  }
+
   button {
     @apply cursor-pointer;
   }

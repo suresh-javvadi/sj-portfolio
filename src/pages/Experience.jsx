@@ -28,11 +28,11 @@ const Experience = () => {
   const startDate = "2024-05-01";
 
   return (
-    <div className="bg-white dark:bg-black border-2 border-[#4B3D10] p-6 space-y-10 rounded-lg">
+    <div className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
       {/* Education */}
       <div>
         <h1 className="text-2xl font-bold mb-4">Education</h1>
-        <div className="p-6 border-2 border-[#4B3D10] rounded-lg">
+        <div className="p-6 border-2 border-[var(--border-main)] rounded-lg">
           <h2 className="text-lg font-semibold">
             B.Tech in Computer Science and Engineering
           </h2>
@@ -46,11 +46,11 @@ const Experience = () => {
       {/* Experience */}
       <div>
         <h1 className="text-2xl font-bold mb-4">Experience</h1>
-        <div className="flex items-center gap-6 p-6 border-2 border-[#4B3D10] rounded-lg">
+        <div className="flex items-center gap-6 p-6 border-2 border-[var(--border-main)] rounded-lg">
           <img
             src={scutoidLogo}
             alt="Scutoid Technologies Logo"
-            className="w-20 h-20 rounded-lg object-cover border border-[#4B3D10] p-2"
+            className="w-20 h-20 rounded-lg object-cover border border-[var(--border-main)] p-2"
           />
           <div>
             <h3 className="text-lg font-semibold">

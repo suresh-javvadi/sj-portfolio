@@ -26,14 +26,14 @@ const Projects = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-black p-8 rounded-lg space-y-10 border border-[#B7A261]">
+    <div className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
       <h1 className="text-3xl font-bold mb-6">Projects</h1>
 
       <div className="grid grid-cols-2 gap-6">
         {projects.map(({ name, img, link, github, tech }, index) => (
           <div
             key={index}
-            className="bg-[#F9F6EA] dark:bg-[#403D32] border-2 border-[#4B3D10] rounded-xl p-4 hover:scale-105 transition-transform duration-300 flex flex-col"
+            className="bg-[var(--bg-ter)] border-2 border-[var(--border-main)] rounded-xl p-4 hover:scale-105 transition-transform duration-300 flex flex-col"
           >
             <a href={link} target="_blank">
               <img

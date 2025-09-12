@@ -6,7 +6,7 @@ import NavBar from "../components/NavBar";
 
 const AppLayout = () => {
   return (
-    <div className="min-h-screen bg-[#FEF6DD] dark:bg-[#1E1E1E] dark:text-white text-black px-10 py-6">
+    <div className="min-h-screen bg-[var(--bg-main)] text-[var(--text-main)] py-8 px-10">
       <Header />
       <div className="flex flex-1">
         <ProfileCard />

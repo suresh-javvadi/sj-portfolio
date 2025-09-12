@@ -11,13 +11,13 @@ const ProfileCard = () => {
       <img
         src={profileAvatar}
         alt="Profile"
-        className="w-32 h-32 rounded-lg object-cover border-4 border-[#B7A261] dark:border-[#4B3D10] absolute top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        className="w-32 h-32 rounded-lg object-cover border-4 border-[var(--border-main)] absolute top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       />
-      <div className="p-6 flex flex-col items-center bg-white border-2 border-[#B7A261] shadow-lg rounded-2xl dark:bg-black mt-16 dark:border-[#4B3D10]">
+      <div className="p-6 flex flex-col items-center bg-[var(--bg-sec)] border-2 border-[var(--border-main)] shadow-lg rounded-2xl mt-16">
         <h1 className="mt-16 text-2xl font-bold dark:text-[#CCC0C0]">
           Suresh Javvadi
         </h1>
-        <h2 className="bg-[#FEF6DD] dark:bg-[#272522] border border-[#B7A261] dark:border-[#4B3D10] dark:text-[#CCC0C0] py-2 px-8 mt-2 rounded-md font-semibold">
+        <h2 className="bg-[#FEF6DD] dark:bg-[#272522] border border-[var(--border-main)] dark:text-[#CCC0C0] py-2 px-8 mt-2 rounded-md font-semibold">
           React Developer
         </h2>
         <div className="flex gap-6 mt-3">
@@ -64,7 +64,7 @@ const ProfileCard = () => {
             href="/resume.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#E0CE93] dark:bg-[#C2B293] text-black font-semibold text-lg p-2 border-2 rounded-lg border-[#B7A261] dark:border-[#4B3D10] hover:scale-105 transition-transform flex items-center gap-2"
+            className="bg-[#E0CE93] dark:bg-[#C2B293] text-black font-semibold text-lg p-2 border-2 rounded-lg border-[var(--border-main)] dark:border-[#4B3D10] hover:scale-105 transition-transform flex items-center gap-2"
           >
             <span>View Resume</span>
             <FaFileDownload

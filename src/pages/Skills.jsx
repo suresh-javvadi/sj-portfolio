@@ -38,7 +38,7 @@ const Skills = () => {
         className="flex flex-col items-center gap-4 hover:scale-105 transition-transform duration-200"
       >
         <div
-          className="w-24 h-24 flex items-center justify-center border-2 border-[#B7A261] rounded-xl p-1
+          className="w-24 h-24 flex items-center justify-center border-2 border-[var(--border-main)] rounded-xl p-1
                         shadow-[0_4px_10px_rgba(248,223,145,0.6)] bg-transparent"
         >
           <Icon className={`${color} w-18 h-18`} aria-hidden="true" />
@@ -50,7 +50,7 @@ const Skills = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-black border-2 border-[#4B3D10] p-6 space-y-10 rounded-lg">
+    <div className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
       <div>
         <h1 className="text-3xl font-bold mb-6">Skills</h1>
         <div className="flex flex-row flex-wrap gap-4">

@@ -19,7 +19,7 @@ const NavBar = () => {
   ];
 
   return (
-    <nav className="flex flex-col gap-6 items-center bg-white dark:bg-black p-4 border-2 border-[#B7A261] rounded-lg">
+    <nav className="flex flex-col gap-6 items-center bg-[var(--bg-sec)] p-4 border-2 border-[var(--border-main)] rounded-lg">
       {navItems.map((item) => {
         const Icon = item.icon;
         const isActive = location.pathname === item.path;
@@ -31,7 +31,7 @@ const NavBar = () => {
             className={`flex flex-col items-center text-sm transition rounded-lg p-2 w-16 
               ${
                 isActive
-                  ? "bg-[#B7A261] text-white dark:text-black"
+                  ? "bg-[var(--bg-hlt)]"
                   : "bg-[#FEF6DD] dark:bg-[#3B3729] text-black dark:text-[#A89D9D] hover:scale-110"
               }`}
           >

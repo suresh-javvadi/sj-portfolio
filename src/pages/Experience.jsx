@@ -1,5 +1,5 @@
 import React from "react";
-import scutoidLogo from "../assets/scutoid_logo.jpeg";
+import scutoidLogo from "../assets/scutoid_logo.png";
 
 const formatDate = (date) => {
   return date.toLocaleString("default", { month: "short", year: "numeric" });

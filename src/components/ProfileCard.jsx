@@ -1,5 +1,5 @@
 import React from "react";
-import profilePic from "../assets/profile.png";
+import profileAvatar from "../assets/profile_avatar.png";
 import { SiLinkedin } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
 import { MdLocationOn, MdDateRange, MdMail } from "react-icons/md";
@@ -9,7 +9,7 @@ const ProfileCard = () => {
   return (
     <aside className="w-3/12 relative">
       <img
-        src={profilePic}
+        src={profileAvatar}
         alt="Profile"
         className="w-32 h-32 rounded-lg object-cover border-4 border-[#B7A261] dark:border-[#4B3D10] absolute top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
       />
@@ -68,7 +68,7 @@ const ProfileCard = () => {
           >
             <span>View Resume</span>
             <FaFileDownload
-              className="text-[#B7A261] dark:text-[#4B3D10] hover:text-black dark:hover:text-white transition"
+              className="text-[#4B3D10] hover:text-black transition"
               onClick={(e) => {
                 e.preventDefault();
                 const link = document.createElement("a");

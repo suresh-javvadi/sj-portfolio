@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "../firebase/firebaseConfig";
 
 const ContactMe = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      await addDoc(collection(db, "messages"), {
+        ...formData,
+        createdAt: serverTimestamp(),
+      });
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <div className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
       <h1 className="text-2xl font-bold  mb-6">Contact Me</h1>
 
-      <form className="space-y-4">
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium mb-1">
             Name
@@ -16,6 +43,8 @@ const ContactMe = () => {
             name="name"
             className="w-full p-3 rounded-lg border border-[var(--border-main)] bg-transparent focus:ring-2 focus:ring-[#B7A261] outline-none"
             placeholder="Enter your name"
+            value={formData.name}
+            onChange={handleChange}
             required
           />
         </div>
@@ -29,6 +58,8 @@ const ContactMe = () => {
             name="email"
             className="w-full p-3 rounded-lg border border-[var(--border-main)] bg-transparent focus:ring-2 focus:ring-[#B7A261] outline-none"
             placeholder="Enter your email"
+            value={formData.email}
+            onChange={handleChange}
             required
           />
         </div>
@@ -42,6 +73,8 @@ const ContactMe = () => {
             rows="5"
             className="w-full p-3 rounded-lg border border-[var(--border-main)] bg-transparent focus:ring-2 focus:ring-[#B7A261] outline-none resize-none"
             placeholder="Write your message..."
+            value={formData.message}
+            onChange={handleChange}
             required
           ></textarea>
         </div>

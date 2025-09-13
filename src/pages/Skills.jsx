@@ -10,6 +10,8 @@ import {
   SiReactrouter,
 } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
+import LogoLoop from "@/components/LogoLoop";
+import StarBorder from "@/components/StarBorder";
 
 const Skills = () => {
   const skills = [
@@ -30,6 +32,11 @@ const Skills = () => {
     { name: "NPM", icon: FaNpm, color: "text-[#CB3837]" },
   ];
 
+  const techLogos = [...skills, ...tools].map((item) => ({
+    node: <item.icon className={`${item.color} w-12 h-12`} />,
+    title: item.name,
+  }));
+
   const renderSkill = (skill) => {
     const { name, icon: Icon, color } = skill;
     return (
@@ -38,10 +45,10 @@ const Skills = () => {
         className="flex flex-col items-center gap-4 hover:scale-105 transition-transform duration-200"
       >
         <div
-          className="w-24 h-24 flex items-center justify-center border-2 border-[var(--border-main)] rounded-xl p-1
+          className="w-20 h-20 flex items-center justify-center border-2 border-[var(--border-main)] rounded-xl p-1
                         shadow-[0_4px_10px_rgba(248,223,145,0.6)] bg-transparent"
         >
-          <Icon className={`${color} w-18 h-18`} aria-hidden="true" />
+          <Icon className={`${color} w-12 h-12`} aria-hidden="true" />
         </div>
 
         <h2 className="text-base font-semibold text-center">{name}</h2>
@@ -63,6 +70,23 @@ const Skills = () => {
         <div className="flex flex-row flex-wrap gap-4">
           {tools.map(renderSkill)}
         </div>
+      </div>
+
+      <div className="overflow-hidden w-170">
+        <StarBorder className="w-full" color="cyan" speed="3s">
+          <LogoLoop
+            logos={techLogos}
+            speed={120}
+            direction="left"
+            logoHeight={48}
+            gap={40}
+            pauseOnHover
+            scaleOnHover
+            fadeOut
+            fadeOutColor="var(--bg-sec)"
+            ariaLabel="Technology logos"
+          />
+        </StarBorder>
       </div>
     </div>
   );

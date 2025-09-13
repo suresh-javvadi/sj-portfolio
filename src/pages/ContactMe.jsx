@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase/firebaseConfig";
+import emailjs from "@emailjs/browser";
 
 const ContactMe = () => {
   const [formData, setFormData] = useState({
@@ -15,8 +16,31 @@ const ContactMe = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const payload = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "ser_sj_contact_me_7104",
+        "temp_sj_contact_me_7104",
+        payload,
+        "Z9StIGPStHhnv344k"
+      )
+      .then(
+        (result) => {
+          console.log("Email sent successfully!", result.text);
+        },
+        (error) => {
+          console.error("Email send error:", error.text);
+        }
+      );
+
     try {
-      await addDoc(collection(db, "messages"), {
+      await addDoc(collection(db, "contactme"), {
         ...formData,
         createdAt: serverTimestamp(),
       });

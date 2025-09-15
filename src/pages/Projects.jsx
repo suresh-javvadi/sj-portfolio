@@ -1,27 +1,24 @@
 import React from "react";
+import calCulatorThumb from "../assets/projects/calculator_thumb.png";
+import toDoThumb from "../assets/projects/to_do_thumb.png";
 
 const Projects = () => {
   const projects = [
     {
-      name: "Calculator",
-      tech: "JavaScript",
-      img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvTTH_fME5GhfNUuCWPTTLXqHcdB8YjKNN0Q&s",
-      link: "https://your-calculator-demo-link.com",
-      github: "https://github.com/your-username/calculator",
-    },
-    {
       name: "Todo List",
       tech: "JavaScript",
-      img: "https://cdn-icons-png.flaticon.com/512/2921/2921222.png",
-      link: "https://your-todo-demo-link.com",
-      github: "https://github.com/your-username/todo-app",
+      img: toDoThumb,
+      link: "https://sj-to-do-list-7104.web.app/",
+      github:
+        "https://github.com/sureshjavvadi24/js-learning-roadmap/tree/main/projects/js-to-do-app",
     },
     {
-      name: "Portfolio Website",
-      tech: "React JS",
-      img: "https://cdn-icons-png.flaticon.com/512/3135/3135715.png",
-      link: "https://your-portfolio-link.com",
-      github: "https://github.com/your-username/portfolio",
+      name: "Calculator",
+      tech: "JavaScript",
+      img: calCulatorThumb,
+      link: "https://sj-calculator-7104.web.app/",
+      github:
+        "https://github.com/sureshjavvadi24/js-learning-roadmap/tree/main/projects/js-calculator-app",
     },
   ];
 

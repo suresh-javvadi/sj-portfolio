@@ -4,15 +4,35 @@ import { SiLinkedin } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
 import { MdLocationOn, MdDateRange, MdMail } from "react-icons/md";
 import { FaPhoneAlt, FaFileDownload } from "react-icons/fa";
+import profilePic from "../assets/profile_pic.png";
+import PixelTransition from "./PixelTransition";
 
 const ProfileCard = () => {
   return (
     <aside className="w-3/12 relative">
-      <img
-        src={profileAvatar}
-        alt="Profile"
-        className="w-32 h-32 rounded-lg object-cover border-4 border-[var(--border-main)] absolute top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-      />
+      <div className="absolute top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-4 border-[var(--border-main)] rounded-lg">
+        <PixelTransition
+          firstContent={
+            <img
+              src={profileAvatar}
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          }
+          secondContent={
+            <img
+              src={profilePic}
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          }
+          gridSize={12}
+          pixelColor="#242424"
+          animationStepDuration={0.5}
+          className="w-full h-full"
+        />
+      </div>
+
       <div className="p-6 flex flex-col items-center bg-[var(--bg-sec)] border-2 border-[var(--border-main)] shadow-lg rounded-2xl mt-16">
         <h1 className="mt-16 text-2xl font-bold dark:text-[#CCC0C0]">
           Suresh Javvadi

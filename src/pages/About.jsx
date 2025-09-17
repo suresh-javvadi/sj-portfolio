@@ -35,11 +35,11 @@ const About = () => {
       <div className="max-w-3xl mx-auto">
         <h1 className="text-2xl font-bold mb-6">What I Do</h1>
 
-        <div className="flex flex-col md:flex-row items-center border-2 border-[var(--border-main)] dark:border-[#625839] rounded-lg p-6 gap-6 bg-[var(--bg-ter)]">
+        <div className="flex flex-col md:flex-row items-center border-2 border-[var(--border-main)] dark:border-[#625839] rounded-lg p-4 gap-6 bg-[var(--bg-ter)]">
           <img
             src={webFrontendDev}
             alt="Web Front-End Development"
-            className="w-32 h-32 md:w-40 md:h-40 object-contain"
+            className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg"
           />
 
           <div>

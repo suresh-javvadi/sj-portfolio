@@ -1,5 +1,5 @@
 import React from "react";
-import profileAvatar from "../assets/profile_avatar.png";
+import profileAvatar from "../assets/profile_avatar.jpg";
 import { SiLinkedin } from "react-icons/si";
 import { BsGithub } from "react-icons/bs";
 import { MdLocationOn, MdDateRange, MdMail } from "react-icons/md";
@@ -38,18 +38,18 @@ const ProfileCard = () => {
           Suresh Javvadi
         </h1>
         <h2 className="bg-[#FEF6DD] dark:bg-[#272522] border border-[var(--border-main)] dark:text-[#CCC0C0] py-2 px-8 mt-2 rounded-md font-semibold">
-          React Developer
+          <span className="text-xl">👨‍💻</span> Frontend Developer
         </h2>
         <div className="flex gap-6 mt-3">
           <a
-            href="https://www.linkedin.com/in/sureshjavvadi/"
+            href="https://www.linkedin.com/in/suresh-javvadi/"
             target="_blank"
             rel="noreferrer"
           >
             <SiLinkedin className="w-10 h-10 text-[#3662E3] border-2 border-[#3662E3] rounded-lg p-2 hover:scale-110 transition" />
           </a>
           <a
-            href="https://github.com/sureshjavvadi24"
+            href="https://github.com/suresh-javvadi"
             target="_blank"
             rel="noreferrer"
           >

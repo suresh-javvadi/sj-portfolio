@@ -11,7 +11,7 @@ const NavBar = () => {
   const location = useLocation();
 
   const navItems = [
-    { name: "About", icon: FaUserAlt, path: "/about" },
+    { name: "About", icon: FaUserAlt, path: "/" },
     { name: "Experience", icon: BiSolidBriefcase, path: "/experience" },
     { name: "Projects", icon: FaLaptopCode, path: "/projects" },
     { name: "Skills", icon: VscLightbulbAutofix, path: "/skills" },

@@ -1,5 +1,6 @@
 import React from "react";
 import scutoidLogo from "../assets/scutoid_logo.png";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const formatDate = (date) => {
   return date.toLocaleString("default", { month: "short", year: "numeric" });
@@ -28,7 +29,7 @@ const Experience = () => {
   const startDate = "2024-05-01";
 
   return (
-    <div className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
+    <AnimatedSection className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
       {/* Education */}
       <div>
         <h1 className="text-2xl font-bold mb-4">Education</h1>
@@ -67,7 +68,7 @@ const Experience = () => {
           </div>
         </div>
       </div>
-    </div>
+    </AnimatedSection>
   );
 };
 

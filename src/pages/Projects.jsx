@@ -1,6 +1,7 @@
 import React from "react";
 import calCulatorThumb from "../assets/projects/calculator_thumb.png";
 import toDoThumb from "../assets/projects/to_do_thumb.png";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const Projects = () => {
   const projects = [
@@ -23,7 +24,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
+    <AnimatedSection className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
       <h1 className="text-3xl font-bold mb-6">Projects</h1>
 
       <div className="grid grid-cols-2 gap-6">
@@ -48,7 +49,7 @@ const Projects = () => {
           </div>
         ))}
       </div>
-    </div>
+    </AnimatedSection>
   );
 };
 

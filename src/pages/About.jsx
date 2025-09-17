@@ -1,9 +1,10 @@
 import React from "react";
 import webFrontendDev from "../assets/web_front_end_dev.png";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const About = () => {
   return (
-    <div className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
+    <AnimatedSection className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
       <div className="max-w-3xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">About Me</h1>
         <p className="leading-relaxed">
@@ -59,7 +60,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div>
+    </AnimatedSection>
   );
 };
 

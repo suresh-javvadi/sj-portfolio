@@ -10,20 +10,20 @@ import PixelTransition from "./PixelTransition";
 const ProfileCard = () => {
   return (
     <aside className="w-3/12 relative">
-      <div className="absolute top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-4 border-[var(--border-main)] rounded-lg">
+      <div className="absolute top-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-4 border-[var(--border-main)] rounded-xl">
         <PixelTransition
           firstContent={
             <img
               src={profileAvatar}
               alt="Profile"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-lg"
             />
           }
           secondContent={
             <img
               src={profilePic}
               alt="Profile"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover rounded-lg"
             />
           }
           gridSize={12}

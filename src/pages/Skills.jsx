@@ -12,6 +12,7 @@ import {
 import { BsGithub } from "react-icons/bs";
 import LogoLoop from "@/components/LogoLoop";
 import StarBorder from "@/components/StarBorder";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const Skills = () => {
   const skills = [
@@ -57,7 +58,7 @@ const Skills = () => {
   };
 
   return (
-    <div className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
+    <AnimatedSection className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
       <div>
         <h1 className="text-3xl font-bold mb-6">Skills</h1>
         <div className="flex flex-row flex-wrap gap-4">
@@ -88,7 +89,7 @@ const Skills = () => {
           />
         </StarBorder>
       </div>
-    </div>
+    </AnimatedSection>
   );
 };
 

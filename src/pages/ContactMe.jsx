@@ -131,7 +131,7 @@ const ContactMe = () => {
           type="submit"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
-          className="bg-[var(--bg-hlt)] text-black font-semibold py-2 px-4 rounded-lg hover:bg-[var(--bg-hlt-hover)] transition flex justify-center items-center gap-2"
+          className="bg-[var(--bg-hlt)] text-black font-semibold py-2 px-4 rounded-lg hover:bg-[var(--bg-hlt-hover)] transition flex justify-center items-center gap-2 w-full sm:w-auto sm:self-center"
           disabled={isSubmitting}
         >
           {isSubmitting ? "Sending..." : "Send Message ✉️"}

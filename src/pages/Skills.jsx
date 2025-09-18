@@ -47,7 +47,7 @@ const Skills = () => {
       >
         <div
           className="w-20 h-20 flex items-center justify-center border-2 border-[var(--border-main)] rounded-xl p-1
-                        shadow-[0_4px_10px_rgba(248,223,145,0.6)] bg-transparent"
+                   shadow-[0_4px_10px_rgba(248,223,145,0.6)] bg-transparent"
         >
           <Icon className={`${color} w-12 h-12`} aria-hidden="true" />
         </div>
@@ -58,36 +58,45 @@ const Skills = () => {
   };
 
   return (
-    <AnimatedSection className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
+    <AnimatedSection className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-8">
       <div>
-        <h1 className="text-3xl font-bold mb-6">Skills</h1>
-        <div className="flex flex-row flex-wrap gap-4">
+        <h1 className="text-3xl font-bold mb-6 text-center md:text-left">
+          Skills
+        </h1>
+        <div className="flex flex-wrap justify-center sm:justify-start gap-6">
           {skills.map(renderSkill)}
         </div>
       </div>
 
       <div>
-        <h1 className="text-3xl font-bold mb-6">Tools & Softwares</h1>
-        <div className="flex flex-row flex-wrap gap-4">
+        <h1 className="text-3xl font-bold mb-6 text-center md:text-left">
+          Tools & Softwares
+        </h1>
+        <div className="flex flex-wrap justify-center sm:justify-start gap-6">
           {tools.map(renderSkill)}
         </div>
       </div>
 
-      <div className="overflow-hidden w-170">
-        <StarBorder className="w-full" color="cyan" speed="3s">
-          <LogoLoop
-            logos={techLogos}
-            speed={120}
-            direction="left"
-            logoHeight={48}
-            gap={40}
-            pauseOnHover
-            scaleOnHover
-            fadeOut
-            fadeOutColor="var(--bg-sec)"
-            ariaLabel="Technology logos"
-          />
-        </StarBorder>
+      <div className="w-full overflow-hidden">
+        <div className="max-w-[280px] sm:max-w-[320px] md:max-w-[400px] lg:max-w-[480px] xl:max-w-[600px] 2xl:max-w-[1200px] mx-auto px-2 sm:px-0">
+          <StarBorder color="cyan" speed="3s" className="w-full">
+            <div className="flex justify-center py-2 sm:py-3 md:py-4">
+              <LogoLoop
+                logos={techLogos}
+                speed={80}
+                direction="left"
+                logoHeight={32}
+                gap={24}
+                pauseOnHover
+                scaleOnHover
+                fadeOut
+                fadeOutColor="var(--bg-sec)"
+                ariaLabel="Technology logos showcase"
+                className="w-full"
+              />
+            </div>
+          </StarBorder>
+        </div>
       </div>
     </AnimatedSection>
   );

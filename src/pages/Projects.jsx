@@ -25,24 +25,33 @@ const Projects = () => {
 
   return (
     <AnimatedSection className="bg-[var(--bg-sec)] border-2 border-[var(--border-main)] rounded-lg p-6 space-y-6">
-      <h1 className="text-3xl font-bold mb-6">Projects</h1>
+      <h1 className="text-3xl font-bold mb-6 text-center md:text-left">
+        Projects
+      </h1>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {projects.map(({ name, img, link, github, tech }, index) => (
           <div
             key={index}
             className="bg-[var(--bg-ter)] border-2 border-[var(--border-main)] rounded-xl p-4 hover:scale-105 transition-transform duration-300 flex flex-col"
           >
-            <a href={link} target="_blank">
-              <img
-                src={img}
-                alt={name}
-                className="w-full h-40 object-cover mb-2 border border-black dark:border-white rounded-lg"
-              />
-            </a>
-            <h2 className="font-semibold">
+            <div className="flex items-center justify-center flex-1">
+              <a href={link} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={img}
+                  alt={name}
+                  className="max-h-40 object-contain mb-3 border border-black dark:border-white rounded-lg"
+                />
+              </a>
+            </div>
+            <h2 className="font-semibold text-center sm:text-left">
               <span className="mr-1">{name}</span>
-              <a href={github} target="_blank">
+              <a
+                href={github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-cyan-500 hover:underline"
+              >
                 ({tech})
               </a>
             </h2>

@@ -1,5 +1,5 @@
 import React from "react";
-import scutoidLogo from "../assets/scutoid_logo.png";
+import scutoidLogo from "../assets/scutoid_logo.webp";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const formatDate = (date) => {

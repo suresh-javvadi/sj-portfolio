@@ -1,11 +1,12 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router";
 import AppLayout from "../layout/AppLayout";
 import About from "../pages/About";
-import Experience from "../pages/Experience";
 import ContactMe from "../pages/ContactMe";
 import Skills from "../pages/Skills";
-import Projects from "../pages/Projects";
+
+const Experience = lazy(() => import("../pages/Experience"));
+const Projects = lazy(() => import("../pages/Projects"));
 
 const AppRoutes = () => {
   const appRouter = createBrowserRouter([
@@ -15,10 +16,28 @@ const AppRoutes = () => {
       children: [
         { index: true, element: <About /> },
         { path: "/about", element: <About /> },
-        { path: "/experience", element: <Experience /> },
+        {
+          path: "/experience",
+          element: (
+            <Suspense
+              fallback={<div className="p-6 text-center">Loading...</div>}
+            >
+              <Experience />
+            </Suspense>
+          ),
+        },
         { path: "/contactme", element: <ContactMe /> },
         { path: "/skills", element: <Skills /> },
-        { path: "/projects", element: <Projects /> },
+        {
+          path: "/projects",
+          element: (
+            <Suspense
+              fallback={<div className="p-6 text-center">Loading...</div>}
+            >
+              <Projects />
+            </Suspense>
+          ),
+        },
       ],
     },
   ]);

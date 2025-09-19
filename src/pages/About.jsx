@@ -1,5 +1,5 @@
 import React from "react";
-import webFrontendDev from "../assets/web_front_end_dev.png";
+import webFrontendDev from "../assets/web_front_end_dev.webp";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const About = () => {
@@ -42,6 +42,7 @@ const About = () => {
           <img
             src={webFrontendDev}
             alt="Web Front-End Development"
+            loading="lazy"
             className="w-32 h-32 md:w-40 md:h-40 object-cover rounded-lg"
           />
 

@@ -12,6 +12,8 @@ dist
 dist-ssr
 *.local
 .firebase
+stats.html
+rollup-visualizer.html
 
 # Editor directories and files
 .vscode/*

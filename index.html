@@ -6,6 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SJ Portfolio</title>
 
+    <style>
+      :root {
+        --bg-main: #fef6dd;
+        --text-main: black;
+      }
+
+      .dark {
+        --bg-main: #1e1e1e;
+        --text-main: white;
+      }
+
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        background: var(--bg-main);
+        color: var(--text-main);
+        height: 100%;
+      }
+
+      body {
+        overflow-x: hidden;
+      }
+    </style>
+
     <script>
       (() => {
         const savedTheme = localStorage.getItem("appTheme");

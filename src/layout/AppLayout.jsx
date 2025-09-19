@@ -5,23 +5,19 @@ import Header from "../components/Header";
 import NavBar from "../components/NavBar";
 import { Maximize2, Minimize2 } from "lucide-react";
 import useIsMobile from "@/hooks/useIsMobile";
+import ScreenAnimation from "../components/ScreenAnimation";
 
 const AppLayout = () => {
   const isMobile = useIsMobile();
   const [isFullScreen, setIsFullScreen] = useState(false);
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     const handleFullscreenChange = () =>
       setIsFullScreen(Boolean(document.fullscreenElement));
 
     const handleDoubleClick = async () => {
-      try {
-        if (!document.fullscreenElement)
-          await document.documentElement.requestFullscreen();
-        else await document.exitFullscreen();
-      } catch (err) {
-        console.error("Fullscreen toggle failed:", err);
-      }
+      await handleFullscreenToggle();
     };
 
     document.addEventListener("dblclick", handleDoubleClick);
@@ -33,23 +29,35 @@ const AppLayout = () => {
     };
   }, []);
 
-  const toggleFullscreen = async () => {
-    try {
-      if (!document.fullscreenElement)
-        await document.documentElement.requestFullscreen();
-      else await document.exitFullscreen();
-    } catch (err) {
-      console.error("Fullscreen toggle failed:", err);
-    }
+  const handleFullscreenToggle = async () => {
+    setIsAnimating(true);
+
+    setTimeout(async () => {
+      try {
+        if (!document.fullscreenElement)
+          await document.documentElement.requestFullscreen();
+        else await document.exitFullscreen();
+      } catch (err) {
+        console.error("Fullscreen toggle failed:", err);
+      } finally {
+        setIsAnimating(false);
+      }
+    }, 300);
   };
 
   return (
     <>
+      <ScreenAnimation
+        active={isAnimating}
+        color="var(--bg-main)"
+        duration={0.4}
+      />
+
       <div className="min-h-screen bg-[var(--bg-main)] text-[var(--text-main)] py-6 md:py-8 md:px-10">
         <Header
           isMobile={isMobile}
           isFullScreen={isFullScreen}
-          toggleFullscreen={toggleFullscreen}
+          toggleFullscreen={handleFullscreenToggle}
         />
 
         <div className="flex flex-col items-center md:flex-row md:items-start md:justify-start gap-6 mt-6">
@@ -61,14 +69,14 @@ const AppLayout = () => {
             <Outlet />
           </main>
 
-          <div className="w-full max-w-xs md:w-auto flex md:flex-col justify-center mt-4 md:mt-0">
+          <div className="w-full max-w-xs md:w-auto mt-4 md:mt-0">
             <NavBar />
           </div>
         </div>
 
         {!isMobile && (
           <button
-            onClick={toggleFullscreen}
+            onClick={handleFullscreenToggle}
             className="fixed bottom-4 right-4 p-2 rounded-full bg-[#B7A261] text-white shadow-lg hover:scale-105 transition flex items-center justify-center z-50"
             title="Toggle Fullscreen"
           >

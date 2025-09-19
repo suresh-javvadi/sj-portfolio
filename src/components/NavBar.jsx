@@ -44,7 +44,7 @@ const NavBar = () => {
         flex flex-row justify-around items-center
         fixed bottom-0 left-0 w-full z-50
         bg-[var(--bg-sec)] border-t-2 border-[var(--border-main)] p-2
-        sm:static sm:flex-col sm:gap-6 sm:items-center sm:w-auto sm:p-4 sm:border-2 sm:rounded-lg sm:border-[var(--border-main)]
+        sm:static md:flex-col sm:gap-6 sm:items-center sm:w-auto sm:p-4 sm:border-2 sm:rounded-lg sm:border-[var(--border-main)]
       `}
     >
       {navItems.map((item) => {

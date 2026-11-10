@@ -1,13 +1,27 @@
-import React from "react";
-import AppRoutes from "./routes/AppRoutes";
-import FullScreenWrapper from "./components/FullScreeenWrapper";
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import Hero from "./sections/Hero";
+import About from "./sections/About";
+import Experience from "./sections/Experience";
+import Skills from "./sections/Skills";
+import Projects from "./sections/Projects";
+import GithubFeed from "./sections/GithubFeed";
+import Contact from "./sections/Contact";
 
-const App = () => {
+export default function App() {
   return (
-    <FullScreenWrapper>
-      <AppRoutes />
-    </FullScreenWrapper>
+    <>
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Experience />
+        <Skills />
+        <Projects />
+        <GithubFeed />
+        <Contact />
+      </main>
+      <Footer />
+    </>
   );
-};
-
-export default App;
+}

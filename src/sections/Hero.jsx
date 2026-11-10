@@ -1,7 +1,7 @@
 import { motion, useReducedMotion } from "motion/react";
 import { ArrowDownToLine, ArrowRight, ArrowDown, Mail } from "lucide-react";
 import Container from "../components/common/Container";
-import { GithubIcon as Github, LinkedinIcon as Linkedin } from "../components/common/BrandIcons";
+import { GithubIcon as Github, LinkedinIcon as Linkedin, WhatsappIcon as Whatsapp } from "../components/common/BrandIcons";
 import { profile } from "../data/profile";
 
 const EASE = [0.16, 1, 0.3, 1];
@@ -109,6 +109,15 @@ export default function Hero() {
           >
             <Linkedin size={15} strokeWidth={1.75} />
             LinkedIn
+          </a>
+          <a
+            href={profile.whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-fg"
+          >
+            <Whatsapp size={15} strokeWidth={1.75} />
+            WhatsApp
           </a>
         </motion.div>
       </Container>

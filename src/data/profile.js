@@ -5,6 +5,8 @@ export const profile = {
   location: "Hyderabad, Telangana, India",
   locationShort: "Hyderabad, India",
   email: "sureshjavvadi24@gmail.com",
+  phone: "+91 99591 30026",
+  whatsapp: "https://wa.me/919959130026",
   github: "https://github.com/suresh-javvadi",
   linkedin: "https://www.linkedin.com/in/suresh-javvadi/",
   resumeUrl: "/resume.pdf",

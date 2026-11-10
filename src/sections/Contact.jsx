@@ -1,5 +1,5 @@
 import { ArrowUpRight, MapPin } from "lucide-react";
-import { GithubIcon as Github, LinkedinIcon as Linkedin } from "../components/common/BrandIcons";
+import { GithubIcon as Github, LinkedinIcon as Linkedin, WhatsappIcon as Whatsapp } from "../components/common/BrandIcons";
 import Container from "../components/common/Container";
 import Reveal from "../components/animations/Reveal";
 import { profile } from "../data/profile";
@@ -54,6 +54,15 @@ export default function Contact() {
             >
               <Linkedin size={15} strokeWidth={1.75} />
               LinkedIn
+            </a>
+            <a
+              href={profile.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 transition-colors duration-200 hover:text-fg"
+            >
+              <Whatsapp size={15} strokeWidth={1.75} />
+              WhatsApp
             </a>
           </div>
         </Reveal>

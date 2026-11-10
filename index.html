@@ -1,46 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/sj_tab_icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SJ Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 
-    <style>
-      :root {
-        --bg-main: #fef6dd;
-        --text-main: black;
-      }
+    <title>Suresh Javvadi — Full Stack Developer</title>
+    <meta name="title" content="Suresh Javvadi — Full Stack Developer" />
+    <meta
+      name="description"
+      content="Suresh Javvadi is a Full Stack Developer building scalable enterprise applications, React-based MES/ERP platforms, and Node.js backends. Based in Hyderabad, India."
+    />
+    <meta name="author" content="Suresh Javvadi" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#09090B" />
 
-      .dark {
-        --bg-main: #1e1e1e;
-        --text-main: white;
-      }
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Suresh Javvadi — Full Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full Stack Developer building scalable enterprise applications, React-based MES/ERP platforms, and Node.js backends."
+    />
+    <meta property="og:site_name" content="Suresh Javvadi — Portfolio" />
+    <meta property="og:locale" content="en_US" />
 
-      html,
-      body {
-        margin: 0;
-        padding: 0;
-        background: var(--bg-main);
-        color: var(--text-main);
-        height: 100%;
-      }
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Suresh Javvadi — Full Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Full Stack Developer building scalable enterprise applications, React-based MES/ERP platforms, and Node.js backends."
+    />
 
-      body {
-        overflow-x: hidden;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..600;1,9..144,400..500&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
     <script>
-      (() => {
-        const savedTheme = localStorage.getItem("appTheme");
-        const prefersDark = window.matchMedia(
-          "(prefers-color-scheme: dark)"
-        ).matches;
-        if (savedTheme === "dark" || (!savedTheme && prefersDark)) {
-          document.documentElement.classList.add("dark");
-        } else {
-          document.documentElement.classList.remove("dark");
+      (function () {
+        try {
+          var stored = localStorage.getItem('sj-theme');
+          var theme =
+            stored || (window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+          document.documentElement.setAttribute('data-theme', theme);
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'dark');
         }
       })();
     </script>

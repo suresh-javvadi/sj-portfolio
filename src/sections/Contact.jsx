@@ -2,12 +2,14 @@ import { ArrowUpRight, MapPin } from "lucide-react";
 import { GithubIcon as Github, LinkedinIcon as Linkedin, WhatsappIcon as Whatsapp } from "../components/common/BrandIcons";
 import Container from "../components/common/Container";
 import Reveal from "../components/animations/Reveal";
+import ScrollAnchor from "../components/common/ScrollAnchor";
 import { profile } from "../data/profile";
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-24 sm:py-32">
+    <section className="pt-24 pb-24 sm:pt-32 sm:pb-32">
       <Container>
+        <ScrollAnchor id="contact" />
         <Reveal className="border-t border-border pt-16 text-center sm:pt-20">
           <span className="mb-5 block text-xs font-medium tracking-[0.2em] text-accent uppercase">
             Contact

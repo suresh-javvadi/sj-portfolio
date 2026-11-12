@@ -1,12 +1,14 @@
 import SectionHeading from "../components/common/SectionHeading";
 import Container from "../components/common/Container";
 import Reveal from "../components/animations/Reveal";
+import ScrollAnchor from "../components/common/ScrollAnchor";
 import { experience } from "../data/experience";
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 sm:py-32">
+    <section className="pt-24 sm:pt-32">
       <Container>
+        <ScrollAnchor id="experience" />
         <SectionHeading eyebrow="Experience" title="Experience that goes beyond the interface." />
 
         <div className="mt-14 space-y-10">

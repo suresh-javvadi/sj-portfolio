@@ -3,6 +3,7 @@ import { GithubIcon as Github } from "../components/common/BrandIcons";
 import SectionHeading from "../components/common/SectionHeading";
 import Container from "../components/common/Container";
 import Reveal from "../components/animations/Reveal";
+import ScrollAnchor from "../components/common/ScrollAnchor";
 import ProjectVisual from "../components/common/ProjectVisual";
 import { projects } from "../data/projects";
 import { cn } from "../lib/cn";
@@ -36,7 +37,7 @@ function ProjectCard({ project, reversed }) {
         </p>
 
         <p className="mt-4 text-sm text-fg-muted">
-          <span className="text-fg">Role —</span> {project.role}
+          <span className="text-fg">Role:</span> {project.role}
         </p>
 
         <div className="mt-5 flex flex-wrap gap-2">
@@ -96,8 +97,9 @@ function ProjectCard({ project, reversed }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 sm:py-32">
+    <section className="pt-24 sm:pt-32">
       <Container>
+        <ScrollAnchor id="projects" />
         <SectionHeading
           eyebrow="Work"
           title="Selected work."

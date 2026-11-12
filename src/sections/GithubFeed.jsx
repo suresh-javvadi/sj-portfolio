@@ -1,6 +1,7 @@
 import { ArrowUpRight, Star } from "lucide-react";
 import SectionHeading from "../components/common/SectionHeading";
 import Container from "../components/common/Container";
+import ScrollAnchor from "../components/common/ScrollAnchor";
 import StaggerContainer from "../components/animations/StaggerContainer";
 import { staggerItem } from "../components/animations/variants";
 import { motion } from "motion/react";
@@ -36,8 +37,9 @@ export default function GithubFeed() {
   const viewStatus = status === "success" && visibleRepos.length === 0 ? "empty" : status;
 
   return (
-    <section id="github" className="py-24 sm:py-32">
+    <section className="pt-24 sm:pt-32">
       <Container>
+        <ScrollAnchor id="github" />
         <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
           <SectionHeading eyebrow="GitHub" title="More experiments. More code." />
           <a

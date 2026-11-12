@@ -1,6 +1,7 @@
 import SectionHeading from "../components/common/SectionHeading";
 import Container from "../components/common/Container";
 import Reveal from "../components/animations/Reveal";
+import ScrollAnchor from "../components/common/ScrollAnchor";
 import { profile } from "../data/profile";
 
 const FACTS = [
@@ -12,8 +13,9 @@ const FACTS = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 sm:py-32">
+    <section className="pt-24 sm:pt-32">
       <Container>
+        <ScrollAnchor id="about" />
         <SectionHeading eyebrow="About" title="A little about what I do." />
 
         <div className="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-[1.3fr_1fr] lg:gap-16">

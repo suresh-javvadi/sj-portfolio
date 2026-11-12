@@ -1,6 +1,7 @@
 import { Blocks, Database, Server, Wrench } from "lucide-react";
 import SectionHeading from "../components/common/SectionHeading";
 import Container from "../components/common/Container";
+import ScrollAnchor from "../components/common/ScrollAnchor";
 import StaggerContainer from "../components/animations/StaggerContainer";
 import { staggerItem } from "../components/animations/variants";
 import { motion } from "motion/react";
@@ -15,8 +16,9 @@ const ICONS = {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 sm:py-32">
+    <section className="pt-24 sm:pt-32">
       <Container>
+        <ScrollAnchor id="skills" />
         <SectionHeading eyebrow="Skills" title="Tools I use to turn ideas into products." />
 
         <StaggerContainer className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-2xl border border-border bg-border sm:grid-cols-2">

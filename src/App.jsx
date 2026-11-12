@@ -7,10 +7,12 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import GithubFeed from "./sections/GithubFeed";
 import Contact from "./sections/Contact";
+import FullscreenPrompt from "./components/common/FullscreenPrompt";
+import { FullscreenProvider } from "./context/FullscreenContext";
 
 export default function App() {
   return (
-    <>
+    <FullscreenProvider>
       <Navbar />
       <main>
         <Hero />
@@ -22,6 +24,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
-    </>
+      <FullscreenPrompt />
+    </FullscreenProvider>
   );
 }

@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { Menu, X, ArrowDownToLine } from "lucide-react";
 import Container from "../common/Container";
 import ThemeToggle from "./ThemeToggle";
+import FullscreenToggle from "./FullscreenToggle";
 import { useActiveSection } from "../../hooks/useActiveSection";
 import { profile } from "../../data/profile";
 import { cn } from "../../lib/cn";
@@ -56,7 +57,7 @@ export default function Navbar() {
           href="#hero"
           onClick={handleNavClick("hero")}
           className="font-display text-xl font-medium tracking-tight text-fg"
-          aria-label={`${profile.name} — back to top`}
+          aria-label={`${profile.name}, back to top`}
         >
           {profile.initials}
         </a>
@@ -87,6 +88,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden items-center gap-4 md:flex">
+          <FullscreenToggle />
           <ThemeToggle />
           <a
             href={profile.resumeUrl}
@@ -99,6 +101,7 @@ export default function Navbar() {
         </div>
 
         <div className="flex items-center gap-3 md:hidden">
+          <FullscreenToggle />
           <ThemeToggle />
           <button
             type="button"

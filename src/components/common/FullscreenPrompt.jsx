@@ -1,21 +1,18 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { Maximize } from "lucide-react";
 import { useFullscreen } from "../../context/FullscreenContext";
 
 const STORAGE_KEY = "fullscreenPromptChoice";
 
+function shouldPrompt() {
+  if (!document.documentElement.requestFullscreen) return false;
+  return !localStorage.getItem(STORAGE_KEY);
+}
+
 export default function FullscreenPrompt() {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(shouldPrompt);
   const { enterFullscreen } = useFullscreen();
-
-  useEffect(() => {
-    if (!document.documentElement.requestFullscreen) return;
-    if (localStorage.getItem(STORAGE_KEY)) return;
-
-    const timer = setTimeout(() => setOpen(true), 800);
-    return () => clearTimeout(timer);
-  }, []);
 
   const handleConfirm = () => {
     localStorage.setItem(STORAGE_KEY, "yes");

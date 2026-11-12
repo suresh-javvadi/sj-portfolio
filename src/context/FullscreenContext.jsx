@@ -22,7 +22,7 @@ export function FullscreenProvider({ children }) {
         // fullscreen request denied or unsupported - ignore
       }
       window.setTimeout(() => setIsAnimating(false), 150);
-    }, 250);
+    }, 300);
   };
 
   const enterFullscreen = () => runWithTransition(() => document.documentElement.requestFullscreen());

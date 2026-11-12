@@ -7,7 +7,7 @@ export const projects = [
     description:
       "An enterprise manufacturing execution and ERP platform designed to support complex manufacturing and business workflows, covering inventory, procurement, PLM, and production modules.",
     technologies: ["React.js", "JavaScript", "Material UI", "Vite", "REST APIs", "MSAL", "PostgreSQL"],
-    role: "Software Engineer — leading frontend delivery",
+    role: "Software Engineer, leading frontend delivery",
     contributions: [
       "Developed enterprise modules across manufacturing, inventory, procurement, and PLM workflows",
       "Implemented complex DataGrid interfaces with MUI DataGrid",
@@ -19,7 +19,7 @@ export const projects = [
     ],
     github: null,
     demo: null,
-    note: "Proprietary enterprise software — professional work experience, not an open-source project.",
+    note: "Proprietary enterprise software: professional work experience, not an open-source project.",
     visual: "mesh",
   },
   {
@@ -28,7 +28,7 @@ export const projects = [
     name: "DevTinder",
     category: "Full Stack Application",
     description:
-      "A developer networking application with JWT cookie authentication, swipe-style connection requests, and a paginated discovery feed — built to explore full-stack architecture end to end.",
+      "A developer networking application with JWT cookie authentication, swipe-style connection requests, and a paginated discovery feed, built to explore full-stack architecture end to end.",
     technologies: ["React.js", "Redux Toolkit", "Node.js", "Express.js", "MongoDB", "JWT"],
     role: "Full Stack Developer (personal project)",
     contributions: [
@@ -48,13 +48,13 @@ export const projects = [
     id: "cinegpt",
     index: "03",
     name: "CineGPT",
-    category: "AI / Movie Discovery Application",
+    category: "Movie Discovery Application",
     description:
-      "An AI-assisted movie discovery app — describe what you want to watch in plain English and get matched recommendations, or browse by language, genre, and trending titles.",
+      "A movie discovery app, describe what you want to watch in plain English and get matched recommendations, or browse by language, genre, and trending titles.",
     technologies: ["React.js", "Vite", "Tailwind CSS", "Redux Toolkit", "TMDB API", "Firebase Auth"],
     role: "Full Stack / Frontend Developer (personal project)",
     contributions: [
-      "Built AI-powered search using Groq (Llama 3.1) with Google Gemini as an automatic fallback",
+      "Built natural-language search using Groq (Llama 3.1) with Google Gemini as an automatic fallback",
       "Integrated the TMDB API for browsing, search, trending, and movie detail pages",
       "Implemented Firebase Authentication with sign up, sign in, and password recovery",
       "Built a hero carousel with autoplaying trailers and session-level caching for performance",
@@ -71,7 +71,7 @@ export const projects = [
     name: "Voltino Systems",
     category: "Freelance Website Redesign",
     description:
-      "A freelance company website redesign — rebuilt on React.js and deployed to Vercel with a custom domain and cutover from the legacy site.",
+      "A freelance company website redesign, rebuilt on React.js and deployed to Vercel with a custom domain and cutover from the legacy site.",
     technologies: ["React.js", "React Router", "Vite", "Tailwind CSS", "Vercel", "SEO"],
     role: "Freelance Developer",
     contributions: [
@@ -82,7 +82,7 @@ export const projects = [
     ],
     github: null,
     demo: "https://voltinosystems.com",
-    note: "Client codebase is private — shown here as a description of the work rather than a source link.",
+    note: "Client codebase is private: shown here as a description of the work rather than a source link.",
     visual: "lines",
   },
 ];

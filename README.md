@@ -1,4 +1,4 @@
-# Suresh Javvadi — Portfolio
+# Suresh Javvadi - Portfolio
 
 Single-page portfolio built with React 19, Vite, Tailwind CSS v4, Motion and Lucide.
 
@@ -11,7 +11,7 @@ npm run preview  # serve the production build
 
 ## Editing content
 
-All copy lives in `src/data/` — no component changes needed for content updates.
+All copy lives in `src/data/`, no component changes needed for content updates.
 
 | File | Contents |
 | --- | --- |

@@ -19,7 +19,7 @@ function writeCache(data) {
   try {
     localStorage.setItem(CACHE_KEY, JSON.stringify({ timestamp: Date.now(), data }));
   } catch {
-    /* localStorage unavailable or full — safe to ignore */
+    /* localStorage unavailable or full, safe to ignore */
   }
 }
 
